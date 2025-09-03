@@ -1,0 +1,25 @@
+.tabela {
+    text-align: center;
+}
+
+.tabela h2 {
+    font-size: 2em;
+}
+
+.imcSpan {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: inherit; /* Herda a cor do container pai */
+}
+
+/* Estilo para a linha da tabela quando o IMC é normal */
+tr.normal {
+    color: #1a4f8d; /* Azul escuro */
+    font-weight: bold;
+}
+
+/* Estilo para a linha da tabela quando o IMC é desfavorável */
+tr.abaixo, tr.acima, tr.obesidade {
+    color: #cc0000; /* Vermelho escuro */
+    font-weight: bold;
+}
