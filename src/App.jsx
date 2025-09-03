@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Header from "./components/Header"
 import Resultado from "./components/Resultado";
 import './css/estilo.css'
@@ -16,21 +16,13 @@ function App() {
   // ESTADO CORRIGIDO: A string "neutro" precisa de aspas
   const [classificacao, setClassificacao] = useState("neutro");
 
-  // useEffect para aplicar a classe de cor no <body> do HTML
-  useEffect(() => {
-    // Remove qualquer classe de cor existente
-    document.body.classList.remove('neutro', 'normal', 'abaixo', 'acima', 'obesidade');
-    // Adiciona a nova classe de cor baseada no estado 'classificacao'
-    document.body.classList.add(classificacao);
-  }, [classificacao]); // Roda sempre que o estado 'classificacao' mudar
-
 
   //CRIANDO A FUNÇÃO CALCULAR IMC
   const calcularImc = (e) => {
     e.preventDefault(); //evita o recarregamento da página
     if (altura > 0 && peso > 0) {
       const imc = peso / (altura * altura);
-      setResultado(imc.toFixed(2)); //arredonda para 2 casas decimais
+      setResultado(imc.toFixed(2)); //arrendonda para 2 casas decimais
       setMostrarResultado(true);
 
       // A LÓGICA DE CLASSIFICAÇÃO DEVE FICAR AQUI DENTRO!
@@ -55,8 +47,8 @@ function App() {
 
 
   return (
-    // Remova a classe dinâmica daqui.
-    <div className="container">
+    // A classe do container é definida pelo estado "classificacao"
+    <div className={`container ${classificacao}`}>
       <div className="box">
         <Header />
         <form>

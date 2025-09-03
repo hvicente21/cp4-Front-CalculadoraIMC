@@ -1,47 +1,38 @@
-/* Estilos globais para o corpo da página */
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
 }
 
-/* O fundo da página (body) será sempre cinza claro */
-body.neutro {
-    background-color: #f0f0f0;
-}
 body.normal {
-    background-color: #f0f0f0;
+    background-color:blue ;
 }
-body.abaixo, body.acima, body.obesidade {
-    background-color: #f0f0f0;
+/* Transição para que a mudança de cor seja suave */
+.container {
+transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 /*
-   ===================================
-   ESTADO NEUTRO (ANTES DO CÁLCULO)
-   ===================================
+ESTADO NEUTRO (ANTES DO CÁLCULO)
 */
 .container.neutro {
-    background-color: #fff;
-    color: #333;
+background-color: #fff;
+color: #333;
 }
 
 /*
-   ===================================
-   RESULTADO "CORRETO" (PESO NORMAL)
-   ===================================
+RESULTADO "CORRETO" (PESO NORMAL)
 */
 .container.normal {
-    background-color: #a4c4e7;
-    color: #1a4f8d;
+background-color: #a4c4e7;
+color: #1a4f8d;
 }
 
 /*
-   ======================================================
-   RESULTADO "ERRADO" (ABAIXO, ACIMA DO PESO OU OBESIDADE)
-   ======================================================
+RESULTADO "ERRADO" (ABAIXO, ACIMA DO PESO OU OBESIDADE)
 */
 .container.abaixo, .container.acima, .container.obesidade {
-    background-color: #ffcccc;
-    color: #cc0000;
+background-color: #ffcccc;
+color: #cc0000;
 }
